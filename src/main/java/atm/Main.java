@@ -9,7 +9,8 @@ public class Main {
         Bank bank = context.getBean(Bank.class);
         System.out.println("Welcome to " + bank.getName());
         ATM atm = context.getBean(ATM.class);
-        String name = atm.validateCustomer(2, 2345);
+
+        String name = atm.validateCustomer(4, 5678);
         System.out.println(name+" has "+atm.getBalance());
         atm.withdraw(200);
         System.out.println(name+" has "+atm.getBalance());
