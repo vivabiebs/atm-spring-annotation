@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         Bank bank = context.getBean(Bank.class);
-        System.out.println(bank.getName());
+        System.out.println("Welcome to " + bank.getName());
         ATM atm = context.getBean(ATM.class);
         String name = atm.validateCustomer(2, 2345);
-        System.out.println(name+"has"+atm.getBalance());
+        System.out.println(name+" has "+atm.getBalance());
         atm.withdraw(200);
-        System.out.println(name+"has"+atm.getBalance());
+        System.out.println(name+" has "+atm.getBalance());
     }
 }
